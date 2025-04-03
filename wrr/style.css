@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #f8f7f7; /* Gris oscuro para un look elegante */
+    --secondary-color: #2a3a5c; /* Blanco puro para limpiar la apariencia */
+    --accent-color: #F26B38; /* Naranja sutil como color de acento */
+    --background-color: #63728d; /* Fondo suave para contraste visual */
+    --highlight-color: #F26B38; /* Color para llamadas a la acción */
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Montserrat', sans-serif; /* Fuente de encabezados más elegante */
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center; /* Centra todo el contenido dentro del header */
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    width: 100%; /* Se asegura que ocupe todo el espacio disponible */
+}
+
+.logo img {
+    width: 150px; /* Tamaño más grande para el logo */
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color); /* Acento de color cuando se pasa el ratón */
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil para que el texto se vea más destacado */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+}
+
+/* HISTORY SECTION */
+.history {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.history h2 {
+    font-size: 3rem;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.history-content img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px; /* Bordes redondeados para un look más moderno */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.history-content img:hover {
+    transform: scale(1.05); /* Efecto de zoom sutil en imágenes */
+}
+
+/* ADVENTURE SECTION */
+.adventures {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--background-color);
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.adventure-gallery figure {
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.adventure-gallery figure:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    position: relative;
+}
+
+footer p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Efecto de zoom en los íconos de redes sociales */
+}
+
+/* MEDIA QUERIES PARA DISPOSITIVOS MOVILES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
