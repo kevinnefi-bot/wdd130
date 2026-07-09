@@ -6,64 +6,76 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 900px;
+    background-color: #f4f6f9;
+    color: #333;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 header {
     background-color: #003366;
-    padding: 15px;
+    padding: 18px;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffd700;
 }
 
 main {
     max-width: 840px;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
 
 h1 {
+    color: #003366;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid #333;
-    padding: 2px;
-    box-shadow: 0 0 10px gray;
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    border: 3px solid #003366;
 }
 
 p {
     padding: 0;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 aside {
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #333;
-    padding: 15px;
-    background-color: #eeeeee;
-    color: #000;
+    width: 840px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #eaf4ff;
+    border-left: 6px solid #003366;
+    border-radius: 10px;
 }
 
 aside h2 {
+    text-align: center;
+    color: #003366;
     margin-bottom: 15px;
 }
 
@@ -72,11 +84,13 @@ aside img {
     height: auto;
     display: block;
     margin: 0 auto 15px;
+    border-radius: 8px;
 }
 
 footer {
-    margin-top: 20px;
-    border-top: 1px solid #000;
+    margin-top: 25px;
+    border-top: 2px solid #003366;
     text-align: center;
     padding: 20px;
+    color: #555;
 }
